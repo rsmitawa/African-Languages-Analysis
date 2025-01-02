@@ -51,8 +51,19 @@ language_data <- data %>%
 write.csv(language_data, "filtered_data/language_data.csv", row.names = FALSE)
 
 # 6. Marital Status and Language Use
+
+# Define the relevant column names based on the mapping
+relevant_columns <- c(
+  "marital_status",  # Question 12: What is your marital status?
+  "languages_learned_in_home_country",  # Question 7: What official, national, or second languages of your home country (other than your mother tongue(s)) did you learn there?
+  "other_languages_learned_home_country",  # Question 11: What other language(s) did you learn in your home country (that you are not fluent in)?
+  "partner_languages",  # Question 13: What is/are the native language(s) of your partner/spouse? (If not applicable, please enter N/A)
+  "partner_other_languages",  # Question 14: What other language(s) is your partner/spouse very fluent in? (If not applicable, please enter N/A)
+  "native_language_attitude_change"  # Question 88: Has your attitude toward your native language(s) changed since immigrating?
+)
+
 marital_language_data <- data %>%
-  select(marital_status, partner_languages, partner_other_languages, language_with_spouse, language_with_children)
+  select(relevant_columns)
 write.csv(marital_language_data, "filtered_data/marital_language_data.csv", row.names = FALSE)
 
 # 7. Occupation and Economic Outcomes

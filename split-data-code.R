@@ -1,5 +1,18 @@
-# Load required library
+# Load necessary libraries
+library(tidyverse)
+library(readxl)
+library(writexl)
+library(ggcorrplot)
+# Load necessary libraries
 library(dplyr)
+library(ggplot2)
+
+
+# Set the working directory (adjust path if necessary)
+setwd('~/Data-Science/R-Projects/African-Analysis-Autopilot/')
+
+# Load the dataset
+data <- read_excel("African-Language-Dataset-Cleaned.xlsx", sheet = 1)
 
 # Create a subdirectory for saving files
 if (!dir.exists("filtered_data")) {

@@ -1,0 +1,28 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore R-related files
+.RData
+.Rhistory
+.Rproj.user/
+
+# Ignore data files
+*.xlsx
+*.csv
+
+# Ignore image files
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Ignore R project files
+*.Rproj
+
+# Ignore temporary files
+*.tmp
+*.log
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
